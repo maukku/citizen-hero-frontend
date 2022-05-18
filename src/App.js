@@ -1,8 +1,9 @@
 import { useState } from "react";
+import CustomMessageForm from "./components/CustomMessageForm";
 function App() {
   return (
     <>
-      <h1 className="header">Citizen Hero</h1>
+     <CustomMessageForm/>
     </>
   );
 }

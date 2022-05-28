@@ -1,2 +1,1 @@
-Fullstack University project
-
+Fullstack university project using the MERN Stack

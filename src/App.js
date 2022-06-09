@@ -10,7 +10,7 @@ function App() {
       lName: "Risso",
       partei: "Die Grünen",
       role: "Member Bundestag",
-      id: 1,
+      id: 2,
     },
   ];
   const [representative, setRepresentative] = useState(representativeMockList);
@@ -18,8 +18,7 @@ function App() {
   return (
     <div className="App">
       <section className="App-content">
-        <h1 className="header">Citizen Hero</h1>
-        // <RepresentativesList reprList={representative} />
+        <h1 className="header">Citizen Hero</h1>c
       </section>
     </div>
   );

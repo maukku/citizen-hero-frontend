@@ -19,7 +19,7 @@ function App() {
     <div className="App">
       <section className="App-content">
         <h1 className="header">Citizen Hero</h1>
-        <RepresentativesList reprList={representative} />
+        // <RepresentativesList reprList={representative} />
       </section>
     </div>
   );

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Representative from "./components/Representative";
 import RepresentativesList from "./components/RepresentativesList";
+import Sidebar from "./components/Sidebar";
 function App() {
   const representativeMockList = [
     {
@@ -17,9 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <section className="App-content">
-        <h1 className="header">Citizen Hero</h1>c
-      </section>
+        <Sidebar/>
     </div>
   );
 }

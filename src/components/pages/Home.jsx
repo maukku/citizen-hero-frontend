@@ -1,15 +1,15 @@
 import React from "react";
-import Sidebar from "../Sidebar";
-import Header from "../Header";
-import Footer from "../Footer";
 
 function Home() {
   return (
-    <div>
-      <Header />
-      <Sidebar />
-      <Footer />
-    </div>
+    <>
+      <div className="Home-text">
+        Citizen Hero uses software to bridge the gap between citizens and <br />
+        politics, empowering them to take part in the political system to make{" "}
+        <br />
+        sure they are represented as they should be.
+      </div>
+    </>
   );
 }
 

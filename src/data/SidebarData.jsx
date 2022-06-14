@@ -8,7 +8,7 @@ const SidebarData = [
   {
     title: "Home",
     icon: <HomeIcon />,
-    link: "/",
+    link: "/Home",
   },
 
   {

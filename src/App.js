@@ -1,9 +1,10 @@
 import { useState } from "react";
 import Representative from "./components/Representative";
 import RepresentativesList from "./components/RepresentativesList";
-import Sidebar from "./components/Sidebar";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./components/pages/Home";
+
 function App() {
   const representativeMockList = [
     {
@@ -20,9 +21,11 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <Sidebar />
-      <Footer />
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

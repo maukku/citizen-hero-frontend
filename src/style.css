@@ -3,21 +3,36 @@ body {
   height: 100%;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+.Home-text {
+  color: whitesmoke;
+  font-size: 20px;
 }
 
 .App {
   padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .Header {
   position: relative;
 }
 
+.content {
+}
 .Footer {
   width: 100%;
   text-align: center;
-  background-color: #63c5da;
+  background-color: #303440;
   height: 30px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  color: white;
 }
 
 .Header-h1 {
@@ -26,12 +41,12 @@ body {
   height: 58px;
   left: 40px;
   top: 140px;
-
+  cursor: pointer;
   font-style: normal;
   font-weight: 800;
   font-size: 48px;
   line-height: 58px;
-  color: red;
+  color: #f94c66;
 }
 
 .Header-img {
@@ -51,6 +66,11 @@ body {
   width: 200px;
   background-color: white;
   color: black;
+  margin-right: 0px;
+  margin-left: auto;
+
+  border-radius: 5%;
+  overflow: hidden;
 }
 
 .Sidebar-list {
@@ -58,6 +78,10 @@ body {
   width: 100%;
   padding: 0;
   margin: 0px;
+}
+
+.Sidebar-link {
+  text-decoration: none;
 }
 .Sidebar-list .row {
   width: 100%;
@@ -68,24 +92,27 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  color: black;
 }
 
 .Sidebar-list .row:hover {
   cursor: pointer;
-  background-color: #63c5da;
+  background-color: #6ddebb;
+  color: white;
+  border-: 5%;
 }
 
-.row #sidebarIcon {
+.row .sidebar-icon {
   flex: 30%;
   display: grid;
   place-items: center;
 }
 
 .Sidebar-list #active {
-  background-color: #63c5da;
+  background-color: #53bf9d;
   color: white;
 }
 
-.row #sidebarTitle {
+.row .sidebar-title {
   flex: 70%;
 }

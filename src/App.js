@@ -1,9 +1,16 @@
 import { useState } from "react";
 import Representative from "./components/Representative";
 import RepresentativesList from "./components/RepresentativesList";
-
+import Header from "./components/shared/Header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Sidebar from "./components/shared/Sidebar";
+import Footer from "./components/shared/Footer";
+
 import Home from "./components/pages/Home";
+import Votes from "./components/pages/Votes";
+import Politicians from "./components/pages/Politicians";
+import Login from "./components/pages/Login";
 
 function App() {
   const representativeMockList = [
@@ -20,14 +27,21 @@ function App() {
   const [representative, setRepresentative] = useState(representativeMockList);
 
   return (
-    <div className="App">
-      <Router>
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-        </Routes>
-      </Router>
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <main className="content">
+          <Routes>
+            <Route exact path="/Home" element={<Home />} />
+            <Route exact path="/Votes" element={<Votes />} />
+            <Route exact path="/Politcians" element={<Politicians />} />
+            <Route exact path="/Login" element={<Votes />} />
+          </Routes>
+        </main>
+        <Sidebar />
+        <Footer />
+      </div>
+    </Router>
   );
 }
-
 export default App;

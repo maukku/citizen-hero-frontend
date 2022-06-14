@@ -20,12 +20,12 @@ body {
   height: 30px;
 }
 
-.Title {
+.Header-h1 {
   position: absolute;
   width: auto;
   height: 58px;
-  left: 59px;
-  top: 180px;
+  left: 40px;
+  top: 140px;
 
   font-style: normal;
   font-weight: 800;
@@ -34,7 +34,7 @@ body {
   color: red;
 }
 
-.HeaderImage {
+.Header-img {
   height: 200px;
   width: 80%;
   object-fit: cover;
@@ -51,17 +51,15 @@ body {
   width: 200px;
   background-color: white;
   color: black;
-  margin-left: auto;
-  margin-right: 0px;
 }
 
-.SidebarList {
+.Sidebar-list {
   height: auto;
   width: 100%;
   padding: 0;
   margin: 0px;
 }
-.SidebarList .row {
+.Sidebar-list .row {
   width: 100%;
   height: 50px;
 
@@ -72,7 +70,7 @@ body {
   align-items: center;
 }
 
-.SidebarList .row:hover {
+.Sidebar-list .row:hover {
   cursor: pointer;
   background-color: #63c5da;
 }
@@ -83,7 +81,7 @@ body {
   place-items: center;
 }
 
-.SidebarList #active {
+.Sidebar-list #active {
   background-color: #63c5da;
   color: white;
 }

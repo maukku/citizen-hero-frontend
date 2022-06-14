@@ -3,6 +3,7 @@ import Representative from "./components/Representative";
 import RepresentativesList from "./components/RepresentativesList";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 function App() {
   const representativeMockList = [
     {
@@ -21,6 +22,7 @@ function App() {
     <div className="App">
       <Header />
       <Sidebar />
+      <Footer />
     </div>
   );
 }

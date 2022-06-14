@@ -1,20 +1,34 @@
+html,
+body {
+  height: 100%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
 .App {
-  width: 100vw;
-  height: 100vh;
+
+  padding: 10px;
 }
 
 .Header {
   position: relative;
 }
 
+.Footer {
+  width: 100%;
+  text-align: center;
+  background-color: #63c5da;
+  height: 30px;
+}
+
+
 .Title {
   position: absolute;
   width: auto;
   height: 58px;
   left: 59px;
-  top: 165px;
+  top: 180px;
 
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 800;
   font-size: 48px;
@@ -30,8 +44,8 @@
 
 body {
   background-color: #434859;
+  padding: 0;
   margin: 0;
-  padding: 10px;
 }
 
 .Sidebar {
@@ -40,7 +54,7 @@ body {
   background-color: white;
   color: black;
   margin-left: auto;
-  margin-right: 0;
+  margin-right: 0px;
 }
 
 .SidebarList {
@@ -53,14 +67,11 @@ body {
   width: 100%;
   height: 50px;
 
-  border: 1px solid #63c5da;
   display: flex;
   list-style-type: none;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
 }
 
 .SidebarList .row:hover {

@@ -54,11 +54,17 @@ body {
   left: 40px;
   top: 140px;
   cursor: pointer;
- font-size: 55px;
-font-style: bold;
+  font-size: 55px;
+  font-style: bold;
   line-height: 58px;
   color: var(--title-color);
 }
+
+.Login-form > label {
+  color: white;
+  font-size: 18px;
+}
+
 
 .Header-img {
   height: 200px;
@@ -120,6 +126,13 @@ body {
 .Sidebar-list #active {
   background-color: var(--primary-blue);
   color: white;
+}
+.BlueButton{
+  background-color: var(--primary-blue);
+  color: white;
+  float: right;
+border:none;
+padding: 5px 10px;
 }
 
 .row .sidebar-title {

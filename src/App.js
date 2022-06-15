@@ -30,15 +30,17 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <main className="content">
-          <Routes>
+        <div className="main-container">
+          <main className="content">
+          <Routes >
             <Route exact path="/Home" element={<Home />} />
             <Route exact path="/Votes" element={<Votes />} />
-            <Route exact path="/Politcians" element={<Politicians />} />
-            <Route exact path="/Login" element={<Votes />} />
+            <Route exact path="/Politicians" element={<Politicians />} />
+            <Route exact path="/Login" element={<Login />} />
           </Routes>
-        </main>
-        <Sidebar />
+</main>
+          <Sidebar />
+        </div>
         <Footer />
       </div>
     </Router>

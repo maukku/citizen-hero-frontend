@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Votes() {
-    return (
-        <div>
-            
-        </div>
-    )
+  return <h1>Some Votes</h1>;
 }
 
-export default Votes
+export default Votes;

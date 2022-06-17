@@ -1,9 +1,33 @@
+import { NavLink } from "react-router-dom";
+
+let activeStyle = {
+  fontWeight: "1000",
+  fontSize: 17,
+};
+
 function Footer() {
   return (
     <footer className="Footer">
-      <div> Footer item 1</div>
-      <div>Footer item 2 </div>
-      <div>Footer item 3</div>
+      <div className="Footer-items">
+        <NavLink
+          to="/Contact"
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
+          Contact
+        </NavLink>
+        <NavLink
+          to="/Legal"
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
+          Legal
+        </NavLink>
+        <NavLink
+          to="/Privacy"
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
+          Privacy
+        </NavLink>
+      </div>
     </footer>
   );
 }

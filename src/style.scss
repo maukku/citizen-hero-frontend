@@ -1,7 +1,5 @@
-:root {
-  --title-color: red;
-  --primary-blue: #38b6ff;
-}
+$primary-blue: #38b6ff;
+
 * {
   text-decoration: none;
   list-style: none;
@@ -26,6 +24,8 @@ body {
   align-self: center;
   justify-self: center;
 }
+
+//Home Page
 .Home-text {
   color: whitesmoke;
   font-size: 25px;
@@ -37,43 +37,49 @@ body {
 
 .Header {
   position: relative;
+  .Header-h1 {
+    position: absolute;
+    width: auto;
+    height: 58px;
+    left: 40px;
+    top: 140px;
+    cursor: pointer;
+    font-size: 55px;
+    font-style: bold;
+    line-height: 58px;
+    color: red;
+  }
+  .Header-img {
+    height: 200px;
+    width: 80%;
+    object-fit: cover;
+  }
 }
 
 .Footer {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  background-color: #303440;
+  background-color: whitesmoke;
   height: 40px;
   position: fixed;
   left: 0;
   bottom: 0;
-  color: white;
+
   align-content: center;
+  justify-content: end;
+
+  .Footer-items a {
+    padding: 10px;
+    color: #434859;
+  }
 }
 
-.Header-h1 {
-  position: absolute;
-  width: auto;
-  height: 58px;
-  left: 40px;
-  top: 140px;
-  cursor: pointer;
-  font-size: 55px;
-  font-style: bold;
-  line-height: 58px;
-  color: var(--title-color);
-}
-
-.Login-form > label {
-  color: white;
-  font-size: 18px;
-}
-
-.Header-img {
-  height: 200px;
-  width: 80%;
-  object-fit: cover;
+//Login Page
+.Login-form {
+  label {
+    color: white;
+    font-size: 18px;
+  }
 }
 
 body {
@@ -95,52 +101,51 @@ body {
     padding: 0;
     margin: 0px;
 
-     .row {
-        width: 100%;
-        height: 55px;
-        display: flex;
-        list-style-type: none;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        background-color: white;
-        color: black;
-        border: 1px solid var(--primary-blue);
-        margin-bottom: 10px;
+    .row {
+      width: 100%;
+      height: 55px;
+      display: flex;
+      list-style-type: none;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      color: black;
+      border: 1px solid primary-blue;
+      margin-bottom: 10px;
 
-        .nav-icon-text-container {
-          width: 100%;
+      .nav-icon-text-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        align-items: center;
+
+        .Sidebar-icon {
           display: grid;
-          grid-template-columns: 1fr 3fr;
-          align-items: center;
+          justify-self: center;
+          align-self: center;
         }
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: $primary-blue;
+        color: white;
+      }
     }
-     .active {
-          cursor: pointer;
-          background-color: var(--primary-blue);
-          color: white;
-        }
+
+    .active {
+      cursor: pointer;
+      background-color: $primary-blue;
+      color: white;
+    }
   }
 }
 
-.Sidebar-list .row:hover {
-  cursor: pointer;
-  background-color: var(--primary-blue);
-  color: white;
-}
-
-.Sidebar-icon {
-  display: grid;
-  justify-self: center;
-  align-self: center;
-}
-
 .BlueButton {
-  background-color: var(--primary-blue);
+  background-color: $primary-blue;
   color: white;
   float: right;
   border: none;
   padding: 5px 10px;
 }
-
-

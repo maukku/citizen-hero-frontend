@@ -11,21 +11,22 @@ body {
   text-decoration: none;
 }
 
+
 .main-container {
   display: -ms-grid;
   display: grid;
   max-width: 100%;
   -ms-grid-columns: 3fr 1fr;
-      grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr 1fr;
   margin-top: 40px;
 }
 
 .content {
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
   -ms-grid-column-align: center;
-      justify-self: center;
+  justify-self: center;
 }
 
 .Home-text {
@@ -58,7 +59,7 @@ body {
   height: 200px;
   width: 80%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .Footer {
@@ -66,7 +67,7 @@ body {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   background-color: #303440;
   height: 40px;
   position: fixed;
@@ -74,7 +75,7 @@ body {
   bottom: 0;
   color: white;
   -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
 }
 
 .Login-form label {
@@ -93,10 +94,10 @@ body {
   width: 220px;
   color: black;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
   -ms-grid-column-align: end;
-      justify-self: end;
+  justify-self: end;
 }
 
 .Sidebar .Sidebar-list {
@@ -115,14 +116,14 @@ body {
   list-style-type: none;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: white;
   color: black;
   border: 1px solid primary-blue;
@@ -134,19 +135,19 @@ body {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 3fr;
-      grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 3fr;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .Sidebar .Sidebar-list .row .nav-icon-text-container .Sidebar-icon {
   display: -ms-grid;
   display: grid;
   -ms-grid-column-align: center;
-      justify-self: center;
+  justify-self: center;
   -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
 
 .Sidebar .Sidebar-list .row:hover {

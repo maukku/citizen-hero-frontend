@@ -13,9 +13,39 @@ body {
   text-decoration: none;
 }
 
+.Politicians {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.Representative {
+  display: grid;
+
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 10px;
+  border-radius: 1%;
+  &:hover {
+    background-color: #4e5469;
+  }
+
+  .Representative-img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 1%;
+  }
+  .Representative-text {
+    color: white;
+    font-size: 18px;
+    justify-self: center;
+    padding-top: 5px;
+  }
+}
 .main-container {
   display: grid;
   max-width: 100%;
+  height: auto;
   grid-template-columns: 3fr 1fr;
   margin-top: 40px;
 }
@@ -61,11 +91,8 @@ body {
   display: grid;
   background-color: whitesmoke;
   height: 40px;
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  grid-column: span 2;
 
-  align-content: center;
   justify-content: end;
 
   .Footer-items a {
@@ -92,7 +119,7 @@ body {
   height: auto;
   width: 220px;
   color: black;
-  align-self: center;
+
   justify-self: end;
 
   .Sidebar-list {

@@ -5,12 +5,13 @@ $primary-blue: #38b6ff;
   list-style: none;
 }
 
-html,
 body {
-  height: 100%;
   font-family: "Inter";
   font-style: normal;
   text-decoration: none;
+}
+.App {
+  min-height: 100vh;
 }
 
 .Politicians {
@@ -37,17 +38,31 @@ body {
   }
   .Representative-text {
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     justify-self: center;
-    padding-top: 5px;
+    margin: 10px;
   }
 }
 .main-container {
   display: grid;
-  max-width: 100%;
-  height: auto;
-  grid-template-columns: 3fr 1fr;
-  margin-top: 40px;
+  grid-template-columns: repeat(4, 1fr);
+  .Header {
+    grid-column: 1/5;
+  }
+  .content {
+    grid-column: 1/4;
+    padding-block: 40px;
+  }
+  .Sidebar {
+    grid-column: 4/5;
+    justify-self: center;
+    height: auto;
+    padding-block: 40px;
+  }
+
+  .Footer {
+    grid-column: 1/5;
+  }
 }
 
 .content {
@@ -61,12 +76,10 @@ body {
   font-size: 25px;
 }
 
-.App {
-  padding: 10px;
-}
-
 .Header {
   position: relative;
+  padding-left: 10px;
+  padding-top: 10px;
   .Header-h1 {
     position: absolute;
     width: auto;
@@ -87,6 +100,8 @@ body {
 }
 
 .Footer {
+  position:sticky;
+  top: 100%;
   width: 100%;
   display: grid;
   background-color: whitesmoke;
@@ -94,10 +109,10 @@ body {
   grid-column: span 2;
 
   justify-content: end;
-
+  align-items: center;
   .Footer-items a {
-    padding: 10px;
     color: #434859;
+    padding-inline: 10px;
   }
 }
 

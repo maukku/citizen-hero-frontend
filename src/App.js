@@ -15,13 +15,11 @@ import Politicians from "./components/pages/Politicians";
 import Login from "./components/pages/Login";
 
 function App() {
-  
-
   return (
     <Router>
       <div className="App">
-        <Header />
         <div className="main-container">
+          <Header className="Header" />
           <main className="content">
             <Routes>
               <Route exact path="/" element={<Home />} />
@@ -33,10 +31,9 @@ function App() {
               <Route exact path="/Privacy" element={<Privacy />} />
             </Routes>
           </main>
-          <Sidebar />
-          <Footer />
+          <Sidebar className="Sidebar" />
         </div>
-  
+        <Footer className="Footer" />
       </div>
     </Router>
   );

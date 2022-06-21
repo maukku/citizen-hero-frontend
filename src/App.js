@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Representative from "./components/Representative";
 import RepresentativesList from "./components/RepresentativesList";
 import Header from "./components/shared/Header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -13,29 +12,32 @@ import Home from "./components/pages/Home";
 import Votes from "./components/pages/Votes";
 import Politicians from "./components/pages/Politicians";
 import Login from "./components/pages/Login";
+import { RepresentativeProvider } from "./RepresentativeContext";
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <div className="main-container">
-          <Header className="Header" />
-          <main className="content">
-            <Routes>
-              <Route exact path="/" element={<Home />} />
-              <Route exact path="/Votes" element={<Votes />} />
-              <Route exact path="/Politicians" element={<Politicians />} />
-              <Route exact path="/Login" element={<Login />} />
-              <Route exact path="/Legal" element={<Legal />} />
-              <Route exact path="/Contact" element={<Contact />} />
-              <Route exact path="/Privacy" element={<Privacy />} />
-            </Routes>
-          </main>
-          <Sidebar className="Sidebar" />
-        </div>
-        <Footer className="Footer" />
-      </div>
-    </Router>
+    <div className="App">
+      <RepresentativeProvider>
+        <Router>
+          <div className="main-container">
+            <Header className="Header" />
+            <main className="content">
+              <Routes>
+                <Route exact path="/" element={<Home />} />
+                <Route exact path="/Votes" element={<Votes />} />
+                <Route exact path="/Politicians" element={<Politicians />} />
+                <Route exact path="/Login" element={<Login />} />
+                <Route exact path="/Legal" element={<Legal />} />
+                <Route exact path="/Contact" element={<Contact />} />
+                <Route exact path="/Privacy" element={<Privacy />} />
+              </Routes>
+            </main>
+            <Sidebar className="Sidebar" />
+          </div>
+          <Footer className="Footer" />
+        </Router>
+      </RepresentativeProvider>
+    </div>
   );
 }
 export default App;

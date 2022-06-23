@@ -12,7 +12,7 @@ import Home from "./components/pages/Home";
 import Votes from "./components/pages/Votes";
 import Politicians from "./components/pages/Politicians";
 import Login from "./components/pages/Login";
-import { RepresentativeProvider } from "./RepresentativeContext";
+import { RepresentativeProvider } from "./context/RepresentativeContext";
 
 function App() {
   return (

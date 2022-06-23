@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import BlueButton from "../BlueButton";
+import BlueButton from "../shared/BlueButton";
 
 function Login() {
   const [values, setValues] = useState({

@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import RepresentativesList from "../RepresentativesList";
-import RepresentativeContext from "../../RepresentativeContext";
+import RepresentativeContext from "../../context/RepresentativeContext";
 
 function Politicians() {
   const { representative } = useContext(RepresentativeContext);

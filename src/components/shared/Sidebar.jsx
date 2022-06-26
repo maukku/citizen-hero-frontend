@@ -14,8 +14,17 @@ function Sidebar() {
     <div className="Sidebar">
       <ul className="Sidebar-list">
         <SidebarItem title={"Home"} link="/" icon={<HomeIcon />} />
+        <SidebarItem
+          title={"Send Email"}
+          link="/CustomForm"
+          icon={<EmailIcon />}
+        />
         <SidebarItem title={"Votes"} link="/Votes" icon={<HowToVoteIcon />} />
-        <SidebarItem title={"Politicians"} link="/Politicians" icon={<PersonIcon />} />
+        <SidebarItem
+          title={"Politicians"}
+          link="/Politicians"
+          icon={<PersonIcon />}
+        />
         <SidebarItem title={"Login"} link="/Login" icon={<LoginIcon />} />
       </ul>
     </div>

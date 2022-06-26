@@ -73,6 +73,20 @@ body {
   font-size: 25px;
 }
 
+
+.CustomForm{
+  background-color: whitesmoke;
+  padding: 20px;
+  width:600px;
+
+border-radius: 2%;
+  .formError{
+    color: #fc3d36;
+    font-size: small;
+  }
+
+}
+
 .Header {
   position: relative;
   padding-left: 10px;

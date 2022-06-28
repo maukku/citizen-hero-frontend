@@ -16,13 +16,13 @@ body {
 
 .Politicians {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 30px;
+  justify-content: center;
 }
-
 .Representative {
   display: grid;
   cursor: pointer;
+  width: 200px;
+
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 10px;
   border-radius: 1%;
@@ -34,6 +34,8 @@ body {
     object-fit: cover;
     width: 200px;
     height: 200px;
+    justify-self: center;
+
     border-radius: 1%;
   }
   .Representative-text {
@@ -73,18 +75,22 @@ body {
   font-size: 25px;
 }
 
+.Politicians-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
 
-.CustomForm{
+.CustomForm {
   background-color: whitesmoke;
   padding: 20px;
-  width:600px;
+  width: 600px;
 
-border-radius: 2%;
-  .formError{
+  border-radius: 2%;
+  .formError {
     color: #fc3d36;
     font-size: small;
   }
-
 }
 
 .Header {
@@ -101,11 +107,10 @@ border-radius: 2%;
     font-size: 55px;
     font-style: bold;
     line-height: 58px;
-    color:#fc3d36 ;
-&:hover{
-  color: red;
-}
-
+    color: #fc3d36;
+    &:hover {
+      color: red;
+    }
   }
   .Header-img {
     height: 200px;

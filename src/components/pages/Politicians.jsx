@@ -1,13 +1,9 @@
-import React, { useState, useContext } from "react";
-import RepresentativesList from "../RepresentativesList";
-import RepresentativeContext from "../../context/RepresentativeContext";
+import RepresentativeItem from "../RepresentativeItem";
 
 function Politicians() {
-  const { representative } = useContext(RepresentativeContext);
-
   return (
-    <div className="Politicians">
-      <RepresentativesList reprList={representative} />
+    <div className="Politicians-container">
+      <RepresentativeItem />
     </div>
   );
 }

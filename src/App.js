@@ -1,5 +1,6 @@
 import { useState } from "react";
-import RepresentativesList from "./components/RepresentativesList";
+import RepresentativeItem from "./components/RepresentativeItem";
+
 import Header from "./components/shared/Header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";

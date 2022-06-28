@@ -5,7 +5,6 @@ const jsonData = require("../data/representativesList.json");
 //const stringData = JSON.stringify(jsonData);
 //const represenativesData = JSON.parse(stringData);
 let myArray = [];
-let mockObject;
 Object.keys(jsonData).forEach(function (key) {
   let value = jsonData[key];
 

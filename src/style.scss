@@ -22,7 +22,7 @@ body {
   display: grid;
   cursor: pointer;
   width: 200px;
-
+  height: 300px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 10px;
   border-radius: 1%;
@@ -33,16 +33,22 @@ body {
   .Representative-img {
     object-fit: cover;
     width: 200px;
-    height: 200px;
+    height: 230px;
     justify-self: center;
 
     border-radius: 1%;
   }
   .Representative-text {
+    display: grid;
     color: white;
     font-size: 16px;
-    justify-self: center;
-    margin: 10px;
+    justify-content: center;
+    align-items: center;
+
+    
+    div {
+      justify-self: center;
+    }
   }
 }
 .main-container {

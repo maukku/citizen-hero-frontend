@@ -1,10 +1,7 @@
-import RepresentativeContext from "../context/RepresentativeContext";
-import React, { useState, useContext } from "react";
 
-function RepresentativeItem() {
-  const { representative } = useContext(RepresentativeContext);
 
-  return representative.map((item) => (
+function RepresentativeItem({ representatives }) {
+  return representatives.map((item) => (
     <div className="Politicians">
       <div className="Representative">
         <div className="Representative-img">

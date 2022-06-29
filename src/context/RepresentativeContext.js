@@ -4,7 +4,7 @@ const RepresentativeContext = createContext();
 const jsonData = require("../data/representativesList.json");
 //const stringData = JSON.stringify(jsonData);
 //const represenativesData = JSON.parse(stringData);
-let myArray = [];
+let dataList = [];
 Object.keys(jsonData).forEach(function (key) {
   let value = jsonData[key];
 
@@ -14,17 +14,17 @@ Object.keys(jsonData).forEach(function (key) {
     imageUrl: value.imageUrl,
   };
 
-  myArray.push(mockObject);
+  dataList.push(mockObject);
 });
 
-myArray = myArray.slice(0, 10);
+dataList = dataList.slice(0, 10);
 
 export function RepresentativeProvider({ children }) {
   //all methods and states
-  const [representative, setRepresentative] = useState(myArray);
+  const [representatives, setRepresentative] = useState(dataList);
 
   return (
-    <RepresentativeContext.Provider value={{ representative }}>
+    <RepresentativeContext.Provider value={{ representatives }}>
       {children}
     </RepresentativeContext.Provider>
   );

@@ -8,13 +8,13 @@ let myArray = [];
 Object.keys(jsonData).forEach(function (key) {
   let value = jsonData[key];
 
-  let mockObject = {
+  let representativesData = {
     fullName: value.fullName,
     nationalPoliticalGroup: value.nationalPoliticalGroup,
     imageUrl: value.imageUrl,
   };
 
-  myArray.push(mockObject);
+  myArray.push(representativesData);
 });
 
 myArray = myArray.slice(0, 10);

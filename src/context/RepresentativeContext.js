@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 
 const RepresentativeContext = createContext();
-const jsonData = require("../data/representativesList.json");
+//const jsonData = require("../data/representativesList.json");
 //const stringData = JSON.stringify(jsonData);
 //const represenativesData = JSON.parse(stringData);
 //let dataList = [];

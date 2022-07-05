@@ -87,6 +87,9 @@ body {
   gap: 30px;
 }
 
+.SearchInput{
+  grid-column : 1/4;
+}
 .CustomForm {
   background-color: whitesmoke;
   padding: 20px;

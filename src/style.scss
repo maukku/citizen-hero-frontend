@@ -45,7 +45,6 @@ body {
     justify-content: center;
     align-items: center;
 
-    
     div {
       justify-self: center;
     }
@@ -81,14 +80,36 @@ body {
   font-size: 25px;
 }
 
+.FooterPage{
+width: 1000px;
+  color: white;
+}
+.Privacy {
+  
+  display: grid;
+ h1, h2{
+  justify-self: center;
+ }
+ a{
+  color: white;
+  font-style: italic;
+  font-size: 17px;
+  &:hover{
+  text-decoration: underline;
+ }
+ }
+ 
+
+}
+
 .Politicians-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
 }
 
-.SearchInput{
-  grid-column : 1/4;
+.SearchInput {
+  grid-column: 1/4;
 }
 .CustomForm {
   background-color: whitesmoke;

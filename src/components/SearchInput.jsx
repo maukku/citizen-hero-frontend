@@ -6,12 +6,6 @@ function SearchInput({ dataObject }) {
   const searchItems = (searchValue) => {
     setSearchInput(searchValue);
 
-   const filteredData= dataObject.filter((item) => {
-      return Object.values(item)
-        .join("")
-        .toLowerCase()
-        .includes(searchInput.toLowerCase());
-    });
   };
 
   return (

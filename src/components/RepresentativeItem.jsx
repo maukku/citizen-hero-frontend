@@ -1,7 +1,9 @@
 
 
 function RepresentativeItem({ representatives }) {
-  return representatives.map((item) => (
+  return (
+    representatives.map((item) => (
+    
     <div className="Politicians">
       <div className="Representative">
         <div className="Representative-img">
@@ -13,7 +15,7 @@ function RepresentativeItem({ representatives }) {
         </div>
       </div>
     </div>
-  ));
+  )))
 }
 
 export default RepresentativeItem;

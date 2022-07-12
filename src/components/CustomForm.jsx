@@ -16,11 +16,7 @@ function CustomForm() {
 
   return (
     <div className="CustomForm">
-      <form
-        action=""
-        onSubmit={handleSubmit}
-        autoComplete="on"
-      >
+      <form action="" onSubmit={handleSubmit} autoComplete="on">
         <div>Citizen Hero</div>
         <br />
         {/* Role */}
@@ -49,10 +45,10 @@ function CustomForm() {
           onChange={handleLocationInputChange}
         />
         {submitted && !values.role ? (
-          <div className="formError">Please enter your role</div>
+          <div className="Error">Please enter your role</div>
         ) : null}
         {submitted && !values.location ? (
-          <div className="formError">Please enter your location</div>
+          <div className="Error">Please enter your location</div>
         ) : null}
         <br />
         <br />
@@ -65,7 +61,7 @@ function CustomForm() {
           onChange={handleReasonInputChange}
         />
         {submitted && !values.reason ? (
-          <div className="formError">Please enter your reason</div>
+          <div className="Error">Please enter your reason</div>
         ) : null}
         {/* Contact */}
         <p>I would like to be contacted by the representative</p>
@@ -99,7 +95,7 @@ function CustomForm() {
         />
         <label for="call">by phone call</label>
         {submitted && !values.contact ? (
-          <div className="formError">
+          <div className="Error">
             Please indicate how you would like to be contacted
           </div>
         ) : null}

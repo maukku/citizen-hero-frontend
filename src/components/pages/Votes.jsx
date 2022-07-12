@@ -5,3 +5,9 @@ function Votes() {
 }
 
 export default Votes;
+//Abstimmung object name
+//Id;
+//Titel;
+//Beschreibung;
+//Datum;
+//Gremium; 

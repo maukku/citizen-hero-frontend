@@ -47,6 +47,7 @@ body {
   width: auto;
   height: 58px;
   left: 40px;
+  right: 40px;
   top: 140px;
   cursor: pointer;
   font-size: 55px;
@@ -57,7 +58,7 @@ body {
 
 .Header .Header-img {
   height: 200px;
-  width: 80%;
+  width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
 }

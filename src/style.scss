@@ -86,6 +86,8 @@ body {
 .Home-text {
   color: whitesmoke;
   font-size: 25px;
+  margin-right: -250px;
+  margin-top: 70px;
 }
 
 .FooterPage{
@@ -93,7 +95,7 @@ width: 1000px;
   color: white;
 }
 .Privacy {
-  
+
   display: grid;
  h1, h2{
   justify-self: center;
@@ -106,7 +108,7 @@ width: 1000px;
   text-decoration: underline;
  }
  }
- 
+
 
 }
 
@@ -168,7 +170,7 @@ input[type="number"] {
     width: auto;
     height: 58px;
     left: 40px;
-    top: 140px;
+    top: 160px;
     cursor: pointer;
     font-size: 55px;
     font-style: bold;
@@ -182,8 +184,24 @@ input[type="number"] {
 
   .Header-img {
     height: 200px;
-    width: 100%;
+    width: 93%;
     object-fit: cover;
+    padding-left: 102px;
+  }
+  .logo {
+    position: absolute;
+    width: 23%;
+    height: auto;
+    left: -36px;
+    top: 4px;
+    z-index: 1;
+  }
+  .wave {
+    position: absolute;
+    width: 26%;
+    height: auto;
+    top: 0px;
+    left: -135px;
   }
 }
 
@@ -223,6 +241,9 @@ body {
   width: 220px;
   color: black;
   height: fit-content;
+  position: fixed;
+  right: 20px;
+  top: 240px;
 
   .Sidebar-list {
     width: 100%;

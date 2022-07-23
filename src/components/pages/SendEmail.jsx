@@ -1,5 +1,6 @@
 import { useState, useContext } from "react";
 import FormContext from "../../context/FormContext";
+import BlueButton from "../shared/BlueButton";
 
 function SendEmail() {
   const {
@@ -34,7 +35,7 @@ function SendEmail() {
         >
           <option value="parent">parent</option>
           <option value="young">young</option>
-          <option value="busines person">busines person</option>
+          <option value="busines person">business person</option>
         </datalist>
         {/* Location */}
         <label htmlFor="location"> from </label>
@@ -72,14 +73,8 @@ function SendEmail() {
         ) : null}
         <br />
         <br />
-        <button
-          className="BlueButton"
-          type="submit"
-          value="Generate personalized message"
-        >
-          Generate personalized message
-        </button>
         <br />
+        <BlueButton text={"Generate personalized message"}></BlueButton>
       </form>
     </div>
   );

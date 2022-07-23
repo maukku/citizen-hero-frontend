@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import BlueButton from "../shared/BlueButton";
 
 function Login() {
@@ -24,7 +25,7 @@ function Login() {
   return (
     <div className="BasicContainer">
       <div className="Title">Log in</div>
-      <form onSubmit={handleSubmit} >
+      <form onSubmit={handleSubmit}>
         <label>Email </label>
         <br />
         <input
@@ -53,7 +54,16 @@ function Login() {
 
         <br />
         <br />
+
         <BlueButton text={"Login"} />
+        <br />
+        <div>
+          Dont have an account yet?{" "}
+          <Link to="/SignUp">
+            {" "}
+            <span className="Bolded-Link">Join us!</span>
+          </Link>
+        </div>
       </form>
     </div>
   );

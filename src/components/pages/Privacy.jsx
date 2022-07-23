@@ -2,7 +2,7 @@ import React from "react";
 
 function Privacy() {
   return (
-    <div className="Privacy FooterPage">
+    <div className="Privacy  BasicContainer">
       <h1>Datenschutzerklärung</h1>
       <p>
         Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der

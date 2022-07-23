@@ -1,7 +1,19 @@
 import React from "react";
+import BlueButton from "../shared/BlueButton";
+import { Link } from "react-router-dom";
 
 function Votes() {
-  return <h1>Some Votes</h1>;
+  return (
+    <div className="BasicContainer">
+      <div className="Title">Votes</div>
+      <Link to="/Newsletter">
+        <BlueButton text={"Get future votes subscribing here"} />
+      </Link>
+      <div className="Votes-Container">
+        <p>Some Votes</p>
+      </div>
+    </div>
+  );
 }
 
 export default Votes;
@@ -10,4 +22,4 @@ export default Votes;
 //Titel;
 //Beschreibung;
 //Datum;
-//Gremium; 
+//Gremium;

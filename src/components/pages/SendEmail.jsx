@@ -35,7 +35,7 @@ function SendEmail() {
         >
           <option value="parent">parent</option>
           <option value="young">young</option>
-          <option value="busines person">business person</option>
+          <option value="business person">business person</option>
         </datalist>
         {/* Location */}
         <label htmlFor="location"> from </label>

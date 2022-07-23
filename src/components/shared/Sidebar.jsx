@@ -16,7 +16,7 @@ function Sidebar() {
         <SidebarItem title={"Home"} link="/" icon={<HomeIcon />} />
         <SidebarItem
           title={"Send Email"}
-          link="/CustomForm"
+          link="/SendEmail"
           icon={<EmailIcon />}
         />
         <SidebarItem title={"Votes"} link="/Votes" icon={<HowToVoteIcon />} />

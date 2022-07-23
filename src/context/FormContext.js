@@ -22,9 +22,6 @@ export function FormProvider({ children }) {
     setValues({ ...values, reason: event.target.value });
   };
 
-  const handleContactWayInputChange = (event) => {
-    setValues({ ...values, contact: event.target.value });
-  };
   const handleSubmit = (event) => {
     event.preventDefault();
     setSubmitted(true);
@@ -40,7 +37,6 @@ export function FormProvider({ children }) {
         handleRoleInputChange,
         handleLocationInputChange,
         handleReasonInputChange,
-        handleContactWayInputChange,
         handleSubmit,
       }}
     >

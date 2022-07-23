@@ -22,13 +22,16 @@ function Login() {
   };
 
   return (
-    <div className="Login">
-      <form onSubmit={handleSubmit} className="Login-form">
+    <div className="BasicContainer">
+      <div className="Title">Log in</div>
+      <form onSubmit={handleSubmit} >
         <label>Email </label>
         <br />
         <input
           type="text"
           name="email"
+          className="TextBox"
+          style={{ width: "200px" }}
           value={values.email}
           required
           onChange={handleEmailInputChange}
@@ -41,6 +44,8 @@ function Login() {
         <input
           type="password"
           name="pass"
+          style={{ width: "200px" }}
+          className="TextBox"
           value={values.password}
           required
           onChange={handlePasswordInputChange}

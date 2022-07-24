@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import titleImg from "../img_wave_clear.gif";
 import logo from "../red_on_transp.gif";
 import wave from "../wave.png";
 function Header() {
@@ -6,14 +7,13 @@ function Header() {
     <div className="Header">
       <img
         className="Header-img"
-        src="https://cdn.pixabay.com/photo/2020/02/29/22/39/demonstration-4891278_960_720.jpg"
+        src={titleImg}
         alt="hands"
       />
       <Link to="/">
         <img className="logo" src={logo} alt="citizen Hero Logo" />
       </Link>
 
-      <img className="wave" src={wave} alt="header image" />
     </div>
   );
 }

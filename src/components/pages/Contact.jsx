@@ -8,7 +8,10 @@ function Contact() {
         If you want to get in touch with us please use the following email:
       </div>{" "}
       <br />
-      <a className="Bolded-Link" href="mailto:contact@citizenhero.de">
+      <a
+        className="Bolded-Link"
+        href="mailto:contact@citizenhero.de?subject=Testing out mailto!&body=This is only a test!"
+      >
         contact@citizenhero.de
       </a>
     </div>

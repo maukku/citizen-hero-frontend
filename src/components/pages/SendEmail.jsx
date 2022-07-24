@@ -14,6 +14,7 @@ function SendEmail() {
     handleSubmit,
   } = useContext(FormContext);
 
+  const template = `HI i am ${values.role} from ${values.location} and I care about that issue because ${values.reason}`;
   return (
     <div className="BasicContainer">
       <form action="" onSubmit={handleSubmit} autoComplete="on">
@@ -25,14 +26,10 @@ function SendEmail() {
           list="role"
           for="role"
           className="TextBox"
+          onChange={handleRoleInputChange}
           style={{ width: "fit-content" }}
         ></input>
-        <datalist
-          id="role"
-          name="role"
-          value={values.role}
-          onChange={handleRoleInputChange}
-        >
+        <datalist id="role" name="role" value={values.role}>
           <option value="parent">parent</option>
           <option value="young">young</option>
           <option value="business person">business person</option>
@@ -74,7 +71,12 @@ function SendEmail() {
         <br />
         <br />
         <br />
-        <BlueButton text={"Generate personalized message"}></BlueButton>
+        <a
+          className="BlueButton"
+          href={`mailto:contact@citizenhero.de?subject=A political request&body=${template}`}
+        >
+          Generate personalized message
+        </a>
       </form>
     </div>
   );

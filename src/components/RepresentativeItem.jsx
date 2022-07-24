@@ -2,8 +2,8 @@ function RepresentativeItem({ representatives }) {
   return (
     representatives.map((item) => (
     
-    <div className="Politicians">
-      <div className="Representative">
+    
+      <div className="Representative ">
         <div className="Representative-img">
           <img className="Representative-img" src={item.imageUrl} alt="" />
         </div>
@@ -12,7 +12,7 @@ function RepresentativeItem({ representatives }) {
           <div>{item.nationalPoliticalGroup}</div>
         </div>
       </div>
-    </div>
+
   )))
 }
 

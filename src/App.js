@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import Sidebar from "./components/shared/Sidebar";
 import Footer from "./components/shared/Footer";
 import Contact from "./components/pages/Contact";
-import Legal from "./components/pages/Legal";
 import Privacy from "./components/pages/Privacy";
 import Home from "./components/pages/Home";
 import Newsletter from "./components/pages/Newsletter";
@@ -36,7 +35,6 @@ function App() {
                   <Route exact path="/SignUp" element={<SignUp />} />
                   <Route exact path="/Login" element={<Login />} />
                   <Route exact path="/Newsletter" element={<Newsletter />} />
-                  <Route exact path="/Legal" element={<Legal />} />
                   <Route exact path="/Contact" element={<Contact />} />
                   <Route exact path="/Privacy" element={<Privacy />} />
                 </Routes>

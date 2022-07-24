@@ -1,8 +1,9 @@
 import { NavLink } from "react-router-dom";
 
 let activeStyle = {
-  fontWeight: "1000",
+  fontWeight: "700",
   fontSize: 17,
+  color: "#38b6ff",
 };
 
 function Footer() {
@@ -14,12 +15,6 @@ function Footer() {
           style={({ isActive }) => (isActive ? activeStyle : undefined)}
         >
           Contact
-        </NavLink>
-        <NavLink
-          to="/Legal"
-          style={({ isActive }) => (isActive ? activeStyle : undefined)}
-        >
-          Legal
         </NavLink>
         <NavLink
           to="/Privacy"

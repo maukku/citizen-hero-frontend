@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 const FormContext = createContext();
 export function FormProvider({ children }) {
   const [values, setValues] = useState({
-    role: "parent",
+    role: "",
     location: "",
     reason: "",
     contact: "",
@@ -12,7 +12,7 @@ export function FormProvider({ children }) {
   const [submitted, setSubmitted] = useState(false);
 
   const handleRoleInputChange = (event) => {
-    setValues({ role: event.target.value });
+    setValues({ ...values, role: event.target.value });
   };
 
   const handleLocationInputChange = (event) => {

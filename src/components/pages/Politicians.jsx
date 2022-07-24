@@ -19,18 +19,16 @@ function Politicians() {
 
   return (
     <div>
-      
-<input
-          placeholder={`Insert a zipcode`}
-          onChange={(e) => setQuery(e.target.value)}
-          inputmode="numeric"
-          className="SearchBar"
-          type="number"
-        />
-        {query.length > 5 ? (
-          <div className="Error">Please insert a proper ZipCode</div>
-        ) : null}
-    
+      <input
+        placeholder={`Insert a zipcode`}
+        onChange={(e) => setQuery(e.target.value)}
+        inputmode="numeric"
+        className="SearchBar"
+        type="number"
+      />
+      {query.length > 5 ? (
+        <div className="Error">Please insert a proper ZipCode</div>
+      ) : null}
 
       {filteredList.length == 0 ? (
         <div className="Politicians-container">

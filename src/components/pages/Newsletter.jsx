@@ -23,7 +23,7 @@ function Subscription() {
 
   return (
     <div className="BasicContainer">
-      <div className="Title">Subscribe to our Newsletter</div>
+      <div className="Title">Subscribe to our Vote Reminder</div>
 
       <form onSubmit={handleSubmit} className="Newsletter">
         <div>

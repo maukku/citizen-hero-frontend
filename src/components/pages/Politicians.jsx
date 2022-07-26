@@ -1,6 +1,8 @@
 import RepresentativeItem from "../RepresentativeItem";
 import RepresentativeContext from "../../context/RepresentativeContext.js";
 import React, { useState, useContext, useEffect } from "react";
+import BlueButton from "../shared/BlueButton";
+
 import SearchIcon from "@mui/icons-material/Search";
 import ZipCodeError from "../ZipCodeError";
 function Politicians() {

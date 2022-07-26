@@ -2,24 +2,24 @@ import React, { useState } from "react";
 import BlueButton from "../shared/BlueButton";
 
 function Subscription() {
-  const [values, setValues] = useState({
-    email: "",
-    name: "",
-  });
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+
   const [submitted, setSubmitted] = useState(false);
 
   const handleEmailInputChange = (event) => {
-    setValues({ email: event.target.value });
+    setEmail(event.target.value);
   };
 
   const handleNameInputChange = (event) => {
-    setValues({ name: event.target.value });
+    setName(event.target.value);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     setSubmitted(true);
   };
+  console.log(`${email} ${name}`);
 
   return (
     <div className="BasicContainer">
@@ -34,19 +34,19 @@ function Subscription() {
             name="name"
             className="TextBox"
             style={{ width: "200px" }}
-            value={values.name}
+            value={name}
             required
             onChange={handleNameInputChange}
           />
         </div>
         <div>
-          <label htmlFor="lastName">Email</label>
+          <label htmlFor="email">Email</label>
           <input
-            type="text"
+            type="email"
             name="email"
             className="TextBox"
             style={{ width: "200px" }}
-            value={values.email}
+            value={email}
             required
             onChange={handleEmailInputChange}
           />

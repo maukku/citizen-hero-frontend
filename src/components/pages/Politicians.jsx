@@ -1,15 +1,19 @@
 import RepresentativeItem from "../RepresentativeItem";
 import RepresentativeContext from "../../context/RepresentativeContext.js";
 import React, { useState, useContext, useEffect } from "react";
-import BlueButton from "../shared/BlueButton";
+import CircularProgress from "@mui/material/CircularProgress";
+import Alert from '@mui/material/Alert';
+import AlertTitle from '@mui/material/AlertTitle';
+
 
 import SearchIcon from "@mui/icons-material/Search";
 import ZipCodeError from "../ZipCodeError";
 function Politicians() {
-  const { representatives, setRepresentative } = useContext(
+  const { representatives, setRepresentative, loading } = useContext(
     RepresentativeContext
   );
   const [query, setQuery] = useState("");
+  const [index, setIndex] = useState(20);
 
   const propsToCheck = ["constituencyZipCodes"];
 
@@ -18,7 +22,7 @@ function Politicians() {
       String(item[key]).toLowerCase().includes(query.toString().toLowerCase())
     );
   });
-
+  console.log(index);
   return (
     <div>
       <input
@@ -28,19 +32,38 @@ function Politicians() {
         className="SearchBar"
         type="number"
       />
-      {query.length > 5 ? (
-        <div className="Error">Please insert a proper ZipCode</div>
-      ) : null}
 
-      {filteredList.length == 0 ? (
+      {query.length > 0 ? (
         <div className="Politicians-container">
-          <ZipCodeError />{" "}
+          <RepresentativeItem
+            className="Politicians-container"
+            representatives={filteredList}
+          />
+        </div>
+      ) 
+      : loading ? (
+        <div>
+          <div className="Politicians-container">
+            <RepresentativeItem
+              representatives={representatives.slice(0, index)}
+            />
+          </div>
+          <br />
+          <button className="BlueButton" onClick={() => setIndex(index + 4)}>
+            Load More
+          </button>
         </div>
       ) : (
-        <div className="Politicians-container">
-          <RepresentativeItem representatives={filteredList} />
-        </div>
+        <CircularProgress />
       )}
+
+       {
+        filteredList.length == 0 ? (
+          <div className="Politicians-container">
+            <ZipCodeError />{" "}
+          </div>
+        ) : null  
+      } 
     </div>
   );
 }

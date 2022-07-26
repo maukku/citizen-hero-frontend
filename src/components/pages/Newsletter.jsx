@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import BlueButton from "../shared/BlueButton";
 
+
 function Subscription() {
   const [values, setValues] = useState({
     email: "",
@@ -45,19 +46,27 @@ function Subscription() {
       }
       console.log("mau");
       //alert("huhuu");*/
-      //const url = 'https://dashboard.heroku.com/apps/polar-mountain-34312/subscribers/create';
-      const url = 'http://localhost:3000/subscribers/create';
+      const url = 'https://polar-mountain-34312.herokuapp.com/subscribers/create';
+      //const url = 'http://localhost:3000/subscribers/create';
       const requestOptions = {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 'Content-Type': 'application/json' ,
+          //"Access-Control-Allow-Origin" :  "*",
+          //"Access-Control-Request-Method": 'POST',
+          //"Access-Control-Request-Headers": 'X-PINGOTHER', 
+
+        },
+          //headers: ("Access-Control-Allow-Origin", "*"),
+          //headers: ("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept"),
+          
           body: JSON.stringify({
             firstName: values.name,
             email: values.email
           }),
       };
       fetch(url, requestOptions)
-          .then(response => console.log('Submitted successfully'))
-          .catch(error => console.log('Form submit error', error))
+          .then(response => alert('Submitted successfully'))
+          .catch(error => console.log(error))
     setSubmitted(true);
   };
 

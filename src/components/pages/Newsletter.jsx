@@ -64,9 +64,10 @@ function Subscription() {
             email: values.email
           }),
       };
+      //Database saves Subscribers, but returns an error. This has to be fixed. Right now we ducktaped it to give at least visual feedback
       fetch(url, requestOptions)
           .then(response => alert('Submitted successfully'))
-          .catch(error => console.log(error))
+          .catch(error => console.log(error)); alert('Welcome on board')
     setSubmitted(true);
   };
 

@@ -17,57 +17,25 @@ function Subscription() {
     setValues({ name: event.target.value });
   };
 
-  const handleSubmit = async(event)  => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-      /*try {
-        let res = await fetch("https://dashboard.heroku.com/apps/polar-mountain-34312/subscribers/create", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            accept: 'application/json',
-          },
-          header: ("Access-Control-Allow-Origin", "*"),
-          header: ("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept"),
-          body: JSON.stringify({
-            firstName: event.name,
-            email: event.email,
-          }),
-        });
-        let resJson = await res.json();
-        if(res.status == 200){
-          alert("Welcome on our subscribers list");
-          return;
-        } else {
-          alert("oooops");
-        } 
-      } catch (err) {
-        console.log(err);
-        alert(err);
-      }
-      console.log("mau");
-      //alert("huhuu");*/
-      const url = 'https://polar-mountain-34312.herokuapp.com/subscribers/create';
-      //const url = 'http://localhost:3000/subscribers/create';
-      const requestOptions = {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' ,
-          //"Access-Control-Allow-Origin" :  "*",
-          //"Access-Control-Request-Method": 'POST',
-          //"Access-Control-Request-Headers": 'X-PINGOTHER', 
-
-        },
-          //headers: ("Access-Control-Allow-Origin", "*"),
-          //headers: ("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept"),
-          
-          body: JSON.stringify({
-            firstName: values.name,
-            email: values.email
-          }),
-      };
-      //Database saves Subscribers, but returns an error. This has to be fixed. Right now we ducktaped it to give at least visual feedback
-      fetch(url, requestOptions)
-          .then(response => alert('Submitted successfully'))
-          .catch(error => console.log(error)); alert('Welcome on board')
+    const url = 'https://polar-mountain-34312.herokuapp.com/subscribers/create';
+    //const url = 'http://localhost:3000/subscribers/create';
+    const requestOptions = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+  
+      body: JSON.stringify({
+        firstName: values.name,
+        email: values.email
+      }),
+    };
+    //Database saves Subscribers, but returns an error. This has to be fixed. Right now we ducktaped it to give at least visual feedback
+    fetch(url, requestOptions)
+      .then(response => alert('Submitted successfully'))
+      .catch(error => console.log(error)); alert('Welcome on board')
     setSubmitted(true);
   };
 

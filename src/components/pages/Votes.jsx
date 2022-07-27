@@ -14,7 +14,7 @@ return votes;
 }
 
 fetchVotes().then(votes => {
-  votes;
+  console.log(votes);
 })
 
 

@@ -15,9 +15,20 @@ function Votes() {
     setLoading(true);
   }
 
-  useEffect(() => {
-    fetchVotes();
-  }, []);
+async function fetchVotes(){
+  const url = "https://polar-mountain-34312.herokuapp.com/votes" ;
+const response  = await fetch(url)
+const votes = await response.json();
+
+return votes;
+
+}
+
+fetchVotes().then(votes => {
+  console.log(votes);
+})
+
+
 
   return (
     <div className="BasicContainer">

@@ -27,8 +27,8 @@ function Subscription() {
       },
   
       body: JSON.stringify({
-        firstName: values.name,
-        email: values.email
+        firstName: name,
+        email: email
       }),
     };
     //Database saves Subscribers, but returns an error. This has to be fixed. Right now we ducktaped it to give at least visual feedback

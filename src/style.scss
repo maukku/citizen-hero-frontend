@@ -97,9 +97,12 @@ body {
 //Home Page
 .Home-text {
   color: whitesmoke;
-  font-size: 25px;
-  margin-right: -250px;
-  margin-top: 70px;
+  font-size: 22px;
+  margin-top: 30px;
+  font-weight: 350;
+  width: 1000px;
+  border-radius: 10px;
+  justify-self: center;
 }
 
 .Privacy {
@@ -132,7 +135,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 30px;
- width: fit-content;
+  width: fit-content;
 }
 
 input::-webkit-outer-spin-button,
@@ -187,6 +190,16 @@ input[type="number"] {
   }
 }
 
+.Home {
+  display: grid;
+}
+
+.Home-Img {
+  height: 600px;
+  align-self: center;
+  justify-self: center;
+}
+
 .Error {
   color: #fc3d36;
   font-size: medium;
@@ -230,6 +243,14 @@ input[type="number"] {
     top: 0px;
     left: -135px;
   }
+}
+
+.step {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #38b6ff;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .Footer {

@@ -11,7 +11,6 @@ export function RepresentativeProvider({ children }) {
   const [representatives, setRepresentative] = useState([]);
   useEffect(() => {
     getData();
-    <h1>Loading..</h1>;
   }, []);
 
   const url = "https://polar-mountain-34312.herokuapp.com/representatives";
@@ -24,6 +23,7 @@ export function RepresentativeProvider({ children }) {
           nationalPoliticalGroup: item.nationalPoliticalGroup,
           constituencyZipCodes: item.constituencyZipCodes,
           imageUrl: item.imageUrl,
+          email: item.email,
         }));
         setLoading(true);
         setRepresentative(representativesData);

@@ -105,6 +105,28 @@ body {
   justify-self: center;
 }
 
+.Votes-Container {
+  .Vote-Item {
+    margin-top: 10px;
+    padding: 10px;
+  }
+  .Vote-Title {
+    font-size: 30px;
+    padding: 8px;
+    font-weight: 400;
+  }
+  .Vote-Description {
+    font-size: 18px;
+    font-weight: 400;
+    padding-inline: 10px;
+    margin-bottom: 5px;
+  }
+  .Vote-Date {
+    padding-inline: 10px;
+    font-size: 15px;
+  }
+}
+
 .Privacy {
   color: black;
 

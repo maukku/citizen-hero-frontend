@@ -7,6 +7,7 @@ import Divider from "@mui/material/Divider";
 function Votes() {
   const [votesList, setVotesList] = useState([]);
   const [loading, setLoading] = useState(false);
+
   async function fetchVotes() {
     const url = "https://polar-mountain-34312.herokuapp.com/votes";
     const response = await fetch(url);
@@ -15,20 +16,9 @@ function Votes() {
     setLoading(true);
   }
 
-async function fetchVotes(){
-  const url = "https://polar-mountain-34312.herokuapp.com/votes" ;
-const response  = await fetch(url)
-const votes = await response.json();
-
-return votes;
-
-}
-
-fetchVotes().then(votes => {
-  console.log(votes);
-})
-
-
+  useEffect(() => {
+    fetchVotes();
+  }, []);
 
   return (
     <div className="BasicContainer">

@@ -39,26 +39,20 @@ function Home() {
       <div className="BasicContainer" style={{ width: "1000px" }}>
         <div className="Title">How to use Citizen Hero:</div>
 
-        <div className="step"> Step 1</div>
-        <div>
-          {" "}
-          Go to the login page to sign in or create an account. This account
-          will help you to keep a track of the representatives from your area
-          and their voting record.
-        </div>
+       
 
-        <div className="step">Step 2</div>
+        <div className="step">Step 1</div>
         <div>
           Go to the Voting page for an overview of current and past votes in the
           parliament.
         </div>
-        <div className="step">Step 3</div>
+        <div className="step">Step 2</div>
         <div>
           Go to the Politicians page and enter your postal code to learn who
           your local representatives are. There will be a list of the
           representatives with their details.
         </div>
-        <div className="step"> Step 4</div>
+        <div className="step"> Step 3</div>
         <div>
           If you want to contact any of the representatives, go to the "Send
           Email" page, fill out a short form, and then click "Generate

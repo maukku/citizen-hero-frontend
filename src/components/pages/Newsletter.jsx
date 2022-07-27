@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import BlueButton from "../shared/BlueButton";
 
+
 function Subscription() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -15,8 +16,25 @@ function Subscription() {
     setName(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+    const url = 'https://polar-mountain-34312.herokuapp.com/subscribers/create';
+    //const url = 'http://localhost:3000/subscribers/create';
+    const requestOptions = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+  
+      body: JSON.stringify({
+        firstName: values.name,
+        email: values.email
+      }),
+    };
+    //Database saves Subscribers, but returns an error. This has to be fixed. Right now we ducktaped it to give at least visual feedback
+    fetch(url, requestOptions)
+      .then(response => alert('Submitted successfully'))
+      .catch(error => console.log(error)); alert('Welcome on board')
     setSubmitted(true);
   };
   console.log(`${email} ${name}`);

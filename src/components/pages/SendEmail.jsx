@@ -1,8 +1,54 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import FormContext from "../../context/FormContext";
-import BlueButton from "../shared/BlueButton";
+import RepresentativeContext from "../../context/RepresentativeContext";
 
 function SendEmail() {
+  const { representatives } = useContext(RepresentativeContext);
+  const url = "https://polar-mountain-34312.herokuapp.com/representatives";
+
+  let myMap = new Map();
+  async function createEmailMap() {
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        data.forEach((item) => {
+          for (
+            let index = 0;
+            index < item.constituencyZipCodes.length;
+            index++
+          ) {
+            if (myMap.has(item.constituencyZipCodes[index])) {
+              let cached_addresses = myMap.get(
+                item.constituencyZipCodes[index]
+              );
+              cached_addresses.push(item.email);
+
+              myMap.set(item.constituencyZipCodes[index], cached_addresses);
+            } else {
+              myMap.set(item.constituencyZipCodes[index], [item.email]);
+            }
+          }
+        });
+        return myMap;
+      });
+  }
+
+  //);
+
+  function returnEmail() {
+    let response = [];
+    representatives.map((item) => {
+      if (item.constituencyZipCodes.includes(values.location)) {
+        response.push(item.email);
+      }
+    });
+    return response;
+  }
+
+  const setZip = (zip) => {
+    console.log(returnEmail(zip.toString()));
+  };
+
   const {
     values,
     setValues,
@@ -73,7 +119,7 @@ function SendEmail() {
         <br />
         <a
           className="BlueButton"
-          href={`mailto:contact@citizenhero.de?subject=A political request&body=${template}`}
+          href={`mailto:${returnEmail()}?subject=A political request&body=${template}`}
         >
           Generate personalized message
         </a>

@@ -1,9 +1,8 @@
 import RepresentativeItem from "../RepresentativeItem";
 import RepresentativeContext from "../../context/RepresentativeContext.js";
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext} from "react";
 import CircularProgress from "@mui/material/CircularProgress";
-import Alert from '@mui/material/Alert';
-import AlertTitle from '@mui/material/AlertTitle';
+
 
 
 import SearchIcon from "@mui/icons-material/Search";
@@ -22,7 +21,7 @@ function Politicians() {
       String(item[key]).toLowerCase().includes(query.toString().toLowerCase())
     );
   });
-  console.log(index);
+
   return (
     <div>
       <input

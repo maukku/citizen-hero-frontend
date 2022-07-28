@@ -7,12 +7,16 @@ export function FormProvider({ children }) {
     location: "",
     reason: "",
     contact: "",
+    name:""
   });
 
   const [submitted, setSubmitted] = useState(false);
 
   const handleRoleInputChange = (event) => {
     setValues({ ...values, role: event.target.value });
+  };
+  const handleNameInputChange = (event) => {
+    setValues({ ...values, name: event.target.value });
   };
 
   const handleLocationInputChange = (event) => {
@@ -35,6 +39,7 @@ export function FormProvider({ children }) {
         submitted,
         setSubmitted,
         handleRoleInputChange,
+        handleNameInputChange,
         handleLocationInputChange,
         handleReasonInputChange,
         handleSubmit,

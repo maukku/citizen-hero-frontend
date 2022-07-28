@@ -6,35 +6,6 @@ function SendEmail() {
   const { representatives } = useContext(RepresentativeContext);
   const url = "https://polar-mountain-34312.herokuapp.com/representatives";
 
-  let myMap = new Map();
-  async function createEmailMap() {
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => {
-        data.forEach((item) => {
-          for (
-            let index = 0;
-            index < item.constituencyZipCodes.length;
-            index++
-          ) {
-            if (myMap.has(item.constituencyZipCodes[index])) {
-              let cached_addresses = myMap.get(
-                item.constituencyZipCodes[index]
-              );
-              cached_addresses.push(item.email);
-
-              myMap.set(item.constituencyZipCodes[index], cached_addresses);
-            } else {
-              myMap.set(item.constituencyZipCodes[index], [item.email]);
-            }
-          }
-        });
-        return myMap;
-      });
-  }
-
-  //);
-
   function returnEmail() {
     let response = [];
     representatives.map((item) => {
@@ -45,28 +16,41 @@ function SendEmail() {
     return response;
   }
 
-  const setZip = (zip) => {
-    console.log(returnEmail(zip.toString()));
-  };
-
   const {
     values,
-    setValues,
     submitted,
-    setSubmitted,
     handleRoleInputChange,
     handleLocationInputChange,
+    handleNameInputChange,
     handleReasonInputChange,
     handleSubmit,
   } = useContext(FormContext);
 
-  const template = `HI i am ${values.role} from ${values.location} and I care about that issue because ${values.reason}`;
+  const template = `Dear representative%0D%0A%0D%0A,
+I am ${values.name} writing to you as a ${values.role}  from the district ${values.location} . As a ${values.role} and a voter from your constituency, I am writing to you to express my concern and ask you and your party to kindly vote in accordance with the wishes of the voters from your constituency on the upcoming voting in the parliament.%0D%0A%0D%0A
+I'm concerned about this problem because ${values.reason}. We are trying our best to contribute, but in order to significantly improve the situation, we need the support of your party, other representatives, and the government to influence policies and take effective action to address this issue.%0D%0A%0D%0A
+Although I am aware that this topic has been discussed in the past, little action has been taken, and I, like many others would really want to see more progress in this regard. Will you take the necessary measures to help resolve this problem?%0D%0A%0D%0A
+I look forward to hearing your response%0D%0A
+Yours sincerely,%0D%0A
+  ${values.name}%0D%0A
+  ${values.location}`;
   return (
     <div className="BasicContainer">
       <form action="" onSubmit={handleSubmit} autoComplete="on">
         <div className="Title">Contact your representatives</div>
         <br />
         {/* Role */}
+        <label htmlFor="name">My name is </label>
+        <input
+          for="name"
+          placeholder="Max Mustermann"
+          type="text"
+          className="TextBox"
+          onChange={handleNameInputChange}
+          style={{ width: "fit-content" }}
+        ></input>
+        <br />
+        <br />
         <label htmlFor="role">I 'am a </label>
         <input
           list="role"

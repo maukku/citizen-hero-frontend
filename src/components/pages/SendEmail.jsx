@@ -4,7 +4,6 @@ import RepresentativeContext from "../../context/RepresentativeContext";
 
 function SendEmail() {
   const { representatives } = useContext(RepresentativeContext);
-  const url = "https://polar-mountain-34312.herokuapp.com/representatives";
 
   function returnEmail() {
     let response = [];

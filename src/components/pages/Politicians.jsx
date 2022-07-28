@@ -5,10 +5,9 @@ import CircularProgress from "@mui/material/CircularProgress";
 
 
 
-import SearchIcon from "@mui/icons-material/Search";
 import ZipCodeError from "../ZipCodeError";
 function Politicians() {
-  const { representatives, setRepresentative, loading } = useContext(
+  const { representatives, loading } = useContext(
     RepresentativeContext
   );
   const [query, setQuery] = useState("");

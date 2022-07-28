@@ -1,9 +1,6 @@
-import { useState } from "react";
-import RepresentativeItem from "./components/RepresentativeItem";
 
 import Header from "./components/shared/Header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Link } from "react-router-dom";
 import Sidebar from "./components/shared/Sidebar";
 import Footer from "./components/shared/Footer";
 import Contact from "./components/pages/Contact";

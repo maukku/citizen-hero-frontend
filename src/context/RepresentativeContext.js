@@ -2,9 +2,6 @@ import { createContext, useState, useEffect } from "react";
 
 const RepresentativeContext = createContext();
 
-//dataList.push(mockObject);
-//});
-
 export function RepresentativeProvider({ children }) {
   const [loading, setLoading] = useState(false);
   //all methods and states
